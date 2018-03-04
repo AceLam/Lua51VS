@@ -6,6 +6,7 @@ if dir then
     package.path = package.path .. ";" .. dir .. "?.lua";
 end
 
+serpent = require("serpent");
 
 modules = {
     --"test.bisect",          --bisection method for solving non-linear equations
@@ -19,7 +20,7 @@ modules = {
     --"test.hello",           --the first program in every languag
     --"test.life",            --Conway's Game of Life
     --"test.luac",            --bare-bones luac
-    "test.printf",          --an implementation of printf
+    --"test.printf",          --an implementation of printf
     --"test.readonly",        --make global variables readonly
     --"test.sieve",           --the sieve of of Eratosthenes programmed with coroutines
     --"test.sort",            --two implementations of a sort function
@@ -28,6 +29,8 @@ modules = {
     --"test.trace-globals",   --trace assigments to global variables
     --"test.xd",              --hex dump
     --"cwd",                  --an implementation of printf
+    --"tables",                --table test
+    "vargs",                --variable arguments
 }
 
 for i, v in ipairs(modules) do
